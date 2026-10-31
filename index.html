@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Gadgets | Smart WhatsApp Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- 1. Navbar -->
+  <header class="navbar">
+    <div class="logo">APEX<span>GADGETS</span></div>
+    <a href="https://wa.me/2348130976312?text=Hello%20Apex%20Gadgets,%20I%20have%20a%20question" class="btn-wa">Send a Message</a>
+  </header>
+
+  <!-- 2. Hero -->
+  <section class="hero">
+    <span class="badge">✓ Same-Day Delivery in Benin City</span>
+    <h1>Select Your Gadgets & Checkout on WhatsApp</h1>
+    <p>Your cart saves automatically! Add items below, enter your delivery address, and send your order.</p>
+  </section>
+
+  <!-- 3. Products -->
+  <h2 class="section-title">Featured In-Stock Deals</h2>
+  <section class="products-grid">
+    
+    <!-- Product 1 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80" alt="ThinkPad Laptop" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">Lenovo ThinkPad E485</h3>
+        <p class="card-specs">Ryzen 5 • 8GB RAM • 256GB SSD • Vega 8</p>
+        <div class="card-price">₦245,000</div>
+        <button class="btn-add" onclick="addToCart('Lenovo ThinkPad E485', 245000, this)">Add to Order +</button>
+      </div>
+    </article>
+
+    <!-- Product 2 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=600&q=80" alt="Power Bank" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">Redmi 20,000mAh Power Bank</h3>
+        <p class="card-specs">18W Fast Charge • Dual USB Output</p>
+        <div class="card-price">₦22,500</div>
+        <button class="btn-add" onclick="addToCart('Redmi 20,000mAh Power Bank', 22500, this)">Add to Order +</button>
+      </div>
+    </article>
+
+    <!-- Product 3 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Wireless Headphones" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">Sony Studio Wireless Headset</h3>
+        <p class="card-specs">30-Hour Battery • Deep Bass • Type-C</p>
+        <div class="card-price">₦35,000</div>
+        <button class="btn-add" onclick="addToCart('Sony Studio Wireless Headset', 35000, this)">Add to Order +</button>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- 4. Sticky Bottom Cart Drawer -->
+  <div id="cartDrawer" class="cart-drawer">
+    <div class="cart-container">
+      
+      <!-- Dynamic list of grouped items -->
+      <div id="cartItemsList" class="cart-items-list"></div>
+
+      <!-- NEW: Customer Name & Delivery Location Inputs -->
+      <div class="delivery-inputs">
+        <input 
+          type="text" 
+          id="customerName" 
+          class="input-field" 
+          placeholder="Your Name (e.g., Osas)" 
+          oninput="saveCustomerDetails()"
+        >
+        <input 
+          type="text" 
+          id="customerAddress" 
+          class="input-field" 
+          placeholder="Delivery Address / Landmark (e.g., Ekosodin / Ugbowo)" 
+          oninput="saveCustomerDetails()"
+        >
+      </div>
+      <span id="errorMsg" class="error-msg">⚠️ Please enter both your name and delivery address to checkout.</span>
+
+      <!-- Bottom Summary & Checkout Button -->
+      <div class="cart-summary-row">
+        <div>
+          <span id="cartCount" class="cart-count">0 items in cart</span>
+          <span id="cartTotal" class="cart-total">₦0</span>
+        </div>
+        <div class="cart-actions">
+          <button class="btn-clear" onclick="clearCart()">Clear All</button>
+          <button onclick="checkoutOnWhatsApp()" class="btn-wa">Send Order on WhatsApp →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. Footer -->
+  <footer>
+    <strong>APEX GADGETS BENIN</strong>
+    <p>Shop 14, Opposite UNIBEN Main Gate, Ugbowo, Benin City</p>
+  </footer>
+</body>
+</html>
