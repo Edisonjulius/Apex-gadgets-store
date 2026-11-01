@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fest Tech Gadgets Benin | Trusted Laptops & Accessories</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="Fest tech - icon.jpg">
+</head>
+<body>
+
+  <!-- 1. Head Navbar -->
+  <header class="navbar">
+    <div class="logo">FEST TECH<span> GADGETS</span></div>
+    <div class="whatsapp-container">
+      <a
+        href="https://web.whatsapp.com/send?phone=2348149571308"
+        class="whatsapp-btn"
+        id="whatsappButton"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Chat with us on WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. Homepage & About Business Hero Section -->
+  <section class="hero-about animate-fade">
+    <span class="badge">⚡ Verified Tech Hub in Benin City</span>
+    <h1>We Give You The Best Deals<span> For Less</span></h1>
+    <p>We supply Phones , Laptops , Desktops , Gaming consoles and games , Bluetooth Speakers , Accessories and more.</p>
+
+    <!-- Trust Pillars -->
+    <div class="trust-grid">
+      <div class="trust-card">
+        <h4>🛡️ 100% Tested & Warranted</h4>
+        <p>Every laptop and gadget goes through hardware diagnostics before it leaves our shop.</p>
+      </div>
+      <div class="trust-card">
+        <h4>📍 Agip Pickup Hub</h4>
+        <p>Located right at Agip junction , Country Home Road , Benin City , For easy pickup.</p>
+      </div>
+      <div class="trust-card">
+        <h4>⚡ Instant WhatsApp Checkout</h4>
+        <p>Bundle your items and send your order straight to our WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Vendor Admin Panel (Hidden Until Unlocked) -->
+  <!-- <section id="adminPanel" class="admin-panel">
+    <div class="admin-header">
+      <div>
+        <h3>🛠️ Shop Owner Inventory Manager</h3>
+        <span class="admin-badge">Admin View Active — Customer Add-to-Cart Hidden</span>
+      </div>
+      <button class="btn-clear" style="color: #0f172a; border-color: #cbd5e1;" onclick="lockAdminMode()">Exit Admin View ✕</button>
+    </div>
+
+    <div class="admin-grid">
+      <input type="text" id="newProdName" class="admin-input" placeholder="Product Name (e.g., HP EliteBook 840 G5)">
+      <input type="number" id="newProdPrice" class="admin-input" placeholder="Price in Naira (e.g., 285000)">
+      <input type="text" id="newProdSpecs" class="admin-input" placeholder="Short Specs (e.g., Core i5 • 16GB RAM)">
+      <input type="text" id="newProdImg" class="admin-input" placeholder="Image URL (or leave blank for default)" style="grid-column: 1 / -1;">
+    </div>
+
+    <div class="admin-actions">
+      <button class="btn-wa" onclick="addNewProduct()">+ List Product</button>
+      <button class="btn-clear" style="color: #64748b; border-color: #cbd5e1;" onclick="resetDefaultProducts()">Reset Default Products</button>
+    </div>
+  </section> -->
+
+  <!-- 4. Dynamic Products Catalog Grid -->
+  <h2 class="section-title">Available In-Stock Deals</h2>
+  <section id="productsGrid" class="products-grid"></section>
+
+  <!-- 5. Sticky Bottom Cart Drawer -->
+  <div id="cartDrawer" class="cart-drawer">
+    <div class="cart-container">
+      <div id="cartItemsList" class="cart-items-list"></div>
+
+      <div class="delivery-inputs">
+        <input type="text" id="customerName" class="input-field" placeholder="Your Name (e.g., Osas)" oninput="saveCustomerDetails()">
+      </div>
+      <span id="errorMsg" class="error-msg">⚠️ Please enter your name to checkout.</span>
+
+      <div class="cart-summary-row">
+        <div>
+          <span id="cartCount" class="cart-count">0 items in cart</span>
+          <span id="cartTotal" class="cart-total">₦0</span>
+        </div>
+        <div class="cart-actions">
+          <button class="btn-clear" onclick="clearCart()">Clear All</button>
+          <button onclick="checkoutOnWhatsApp()" class="btn-wa">Send Order on WhatsApp →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Footer -->
+  <footer>
+    <strong>FEST TECH GADGETS BENIN</strong>
+    <p> Agip Junction , 1 Country Home Road , Off Benin Sapele Road , Benin City , Edo State , Nigeria • Open Mon–Sat @ 8:30 AM</p>
+    <!-- Uncomment button below with the Admin Panel when updating products -->
+    <!-- <button class="btn-admin-toggle" onclick="unlockAdmin()">⚙️ Shop Owner Login</button> -->
+  </footer>
+
+</body>
+</html>
